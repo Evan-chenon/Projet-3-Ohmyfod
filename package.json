@@ -1,0 +1,19 @@
+{
+  "name": "chenon_evan_1_code-062022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evan-chenon/Projet-3-Ohmyfod.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evan-chenon/Projet-3-Ohmyfod/issues"
+  },
+  "homepage": "https://github.com/Evan-chenon/Projet-3-Ohmyfod#readme"
+}
