@@ -27,25 +27,20 @@ header {
   text-align: center;
   padding: 8px;
 }
-
 .city i {
   font-size: 24px;
 }
 
-/* EXPLORER */
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   margin-top: 32px;
   font-size: 32px;
 }
-
 .explorer p {
   font-size: 16px;
 }
-
 .explorer button {
   color: white;
   font-weight: 300;
@@ -59,7 +54,6 @@ header {
   margin-top: 16px;
   cursor: pointer;
 }
-
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
