@@ -1,4 +1,9 @@
-@import "./base.scss";
-@import "./layouts/header.scss";
-@import "./layouts/city.scss";
-@import "./layouts/explorer";
+@use "./base/base.scss";
+@use "./layouts/header.scss";
+@use "./layouts/city.scss";
+@use "./layouts/explorer.scss";
+@use "./layouts/functioning.scss";
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;

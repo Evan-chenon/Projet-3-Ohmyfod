@@ -9,6 +9,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 16px;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -48,15 +52,36 @@ header {
   padding: 16px 32px;
   border: none;
   border-radius: 32px;
-  box-shadow: 2px 1px 16px -3px #000000;
   background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   margin-top: 16px;
   cursor: pointer;
+  box-shadow: 2px 1px 8px -3px;
 }
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
+}
+
+.functioning ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 800px) {
+  .functioning ol {
+    flex-direction: column;
+  }
+}
+.functioning li {
+  background-color: #f6f6f6;
+  padding: 16px 32px;
+  flex-grow: 1;
+  border-radius: 16px;
+  box-shadow: 2px 1px 8px -3px;
+}
+.functioning li:hover {
+  transform: scale(1.02);
 }
 
 /*# sourceMappingURL=style.css.map */

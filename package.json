@@ -1,10 +1,11 @@
 {
   "name": "chenon_evan_1_code-062022",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet 3 Ohmyfod",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:css/style.css"
+    "sass": "sass --watch ./sass/main.scss:css/style.css",
+    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "browserslist": "last 4 versions",
   "bugs": {
     "url": "https://github.com/Evan-chenon/Projet-3-Ohmyfod/issues"
   },
