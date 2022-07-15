@@ -1,0 +1,19 @@
+@use "../utils/variables.scss";
+
+footer {
+  text-align: center;
+  padding: 16px 32px;
+  background-color: #383838;
+  color: white;
+  h2 {
+    font-family: variables.$font;
+    font-weight: 500;
+    padding: 16px 0;
+  }
+  a{
+    color: white;
+  }
+  p{
+    padding: 3px;
+  }
+}

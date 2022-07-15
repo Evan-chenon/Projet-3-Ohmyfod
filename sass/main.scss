@@ -3,7 +3,7 @@
 @use "./layouts/city.scss";
 @use "./layouts/explorer.scss";
 @use "./layouts/functioning.scss";
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
+@use "./layouts/menus.scss";
+@use "./layouts/footer.scss";
+@use "./utils/variables.scss";
+@use "./utils/mixins.scss";

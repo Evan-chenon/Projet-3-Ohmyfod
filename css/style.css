@@ -9,10 +9,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding: 0 16px;
+main section {
+  padding: 0 112px;
+}
+@media (max-width: 1000px) {
+  main section {
+    padding: 0 16px;
+  }
 }
 
+h2 {
+  padding: 32px 0;
+  margin: 0;
+}
+
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/*COLOR*/
+/*GRADIENT*/
+/*BREAKPOINT*/
+/*FONT*/
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -39,7 +63,6 @@ header {
   text-align: center;
 }
 .explorer h2 {
-  margin-top: 32px;
   font-size: 32px;
 }
 .explorer p {
@@ -52,36 +75,149 @@ header {
   padding: 16px 32px;
   border: none;
   border-radius: 32px;
-  background-image: linear-gradient(to top, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   transition: transform 200ms;
   margin-top: 16px;
   cursor: pointer;
   box-shadow: 2px 1px 8px -3px;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
 }
 .explorer button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }
 
+.functioning {
+  counter-reset: steps;
+  margin-bottom: 32px;
+}
 .functioning ol {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .functioning ol {
     flex-direction: column;
   }
 }
 .functioning li {
+  position: relative;
+  list-style-type: none;
   background-color: #f6f6f6;
-  padding: 16px 32px;
+  padding: 24px 32px;
   flex-grow: 1;
   border-radius: 16px;
   box-shadow: 2px 1px 8px -3px;
 }
+.functioning li::before {
+  content: counter(steps);
+  counter-increment: steps;
+  color: white;
+  background-color: #9356dc;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: -16px;
+  transform: translateY(-50%);
+}
 .functioning li:hover {
   transform: scale(1.02);
+}
+.functioning li i.fas {
+  margin-right: 16px;
+  color: gray;
+  font-size: 24px;
+}
+
+.menus {
+  background-color: #f6f6f6;
+  padding-bottom: 32px;
+}
+.menus .menus__cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+@media (max-width: 1000px) {
+  .menus .menus__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .menus__cards .new {
+  position: relative;
+}
+.menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 32px;
+  width: 80px;
+  background-color: #99e2d0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 16px;
+  top: 16px;
+}
+.menus .card {
+  background-color: white;
+  box-shadow: 2px 1px 8px -3px;
+  border-radius: 16px;
+}
+.menus .card__image img {
+  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: 192px;
+  object-fit: cover;
+}
+.menus .card__description {
+  position: relative;
+}
+.menus .card__description h3,
+.menus .card__description p {
+  margin: 8px;
+}
+.menus .card__description p {
+  padding: 8px;
+}
+.menus .card__description i {
+  font-size: 32px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menus .card__description .fas {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms;
+  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.menus .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+footer {
+  text-align: center;
+  padding: 16px 32px;
+  background-color: #383838;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: 500;
+  padding: 16px 0;
+}
+footer a {
+  color: white;
+}
+footer p {
+  padding: 3px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,13 @@
+@use "../utils/variables.scss";
+
+@mixin gradient {
+    background-image: linear-gradient(to top, variables.$gradient);
+}
+
+@mixin base-shadow {
+    box-shadow: 2px 1px 8px -3px;
+}
+
+@mixin transform-zoom {
+    transform: scale(1.02);
+}
