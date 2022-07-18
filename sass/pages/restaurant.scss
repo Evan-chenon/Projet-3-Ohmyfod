@@ -1,0 +1,33 @@
+@use "../utils/variables.scss";
+@use "../utils/mixins.scss";
+
+img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+main h2{
+    position: relative;
+    font-family: variables.$font;
+    i{
+        font-size: 32px;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .fas{
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms;
+        @include mixins.gradient;
+      }
+      &:hover .fas{
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
+      }
+}
