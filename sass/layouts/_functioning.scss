@@ -1,9 +1,7 @@
-@use "../utils/mixins.scss";
-@use "../utils/variables.scss";
-
 .functioning {
   counter-reset: steps;
   margin-bottom: 32px;
+  padding: 0 112px;
   ol {
     display: flex;
     gap: 32px;
@@ -17,7 +15,7 @@
       content: counter(steps);
       counter-increment: steps;
       color: white;
-      background-color: variables.$color-primary;
+      background-color: $color-primary;
       width: 32px;
       height: 32px;
       display: grid;
@@ -33,9 +31,9 @@
     padding: 24px 32px;
     flex-grow: 1;
     border-radius: 16px;
-    @include mixins.base-shadow;
+    @include base-shadow;
     &:hover{
-        @include mixins.transform-zoom;
+        @include transform-zoom;
     }
     i.fas{
       margin-right: 16px;

@@ -9,20 +9,20 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main section{
-  padding: 0 112px;
+main {
   @media (max-width: 1000px) {
     padding: 0 16px;
   }
 }
 
-h2 {
-  padding: 32px 0;
-  margin: 0;
-}
-
+h1,
+h2,
 h3,
+h4,
+h5,
+h6,
 p {
+  padding: 0;
   margin: 0;
 }
 

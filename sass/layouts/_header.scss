@@ -1,7 +1,5 @@
-@use "../utils/variables.scss";
-
 header{
-    font-family: variables.$font;
+    font-family: $font;
     text-align: center;
     box-shadow: 0px 0px 8px rgb(0 0 0 /25%);
     padding: 5px;

@@ -1,12 +1,9 @@
-@use "../utils/variables.scss";
-
 footer {
-  text-align: center;
   padding: 16px 32px;
   background-color: #383838;
   color: white;
   h2 {
-    font-family: variables.$font;
+    font-family: $font;
     font-weight: 500;
     padding: 16px 0;
   }
@@ -15,5 +12,8 @@ footer {
   }
   p{
     padding: 3px;
+  }
+  i{
+    padding-right: 10px;
   }
 }

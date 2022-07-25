@@ -1,0 +1,54 @@
+.restaurants {
+  background-color: $lightergrey;
+  padding-bottom: 32px;
+  h3{
+    padding: 0 112px;
+  }
+
+  .restaurants__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    padding: 0 112px;
+    @media (max-width: $breakpoint) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .new {
+      position: relative;
+    }
+    .new::before {
+      content: "Nouveau";
+      position: absolute;
+      height: 32px;
+      width: 80px;
+      background-color: $color-tertiary;
+      color: darken($color-tertiary, 50%);
+      display: grid;
+      place-items: center;
+      right: 16px;
+      top: 16px;
+    }
+  }
+
+  .card {
+    background-color: white;
+    box-shadow: 2px 1px 8px -3px;
+    border-radius: 16px;
+    &__image {
+      img {
+        border-radius: 16px 16px 0 0;
+        width: 100%;
+        height: 192px;
+        object-fit: cover;
+      }
+    }
+    &__description {
+      @include heart-animeted;
+      h3,
+      p {
+        margin: 8px;
+        padding: 5px;
+      }
+    }
+  }
+}
