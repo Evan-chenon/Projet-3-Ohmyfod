@@ -15,11 +15,11 @@ body {
 }
 
 @media (max-width: 1000px) {
-  main {
+  .functioning,
+.restaurants__cards {
     padding: 0 16px;
   }
 }
-
 h1,
 h2,
 h3,
@@ -131,11 +131,11 @@ header {
   inset: 0;
   z-index: 1;
   opacity: 0.8;
-  animation: disappear 100ms 6s forwards;
+  animation: disappear 100ms 3s forwards;
   transform-origin: top;
 }
 .loader::after {
-  content: "OHMYFOOD";
+  content: "";
   height: 100px;
   width: 100px;
   border-right: 5px solid transparent;
@@ -150,9 +150,15 @@ header {
   margin-bottom: 32px;
   padding: 0 112px;
 }
+@media (max-width: 1000px) {
+  .functioning {
+    padding: 0 16px;
+  }
+}
 .functioning ol {
   display: flex;
   gap: 32px;
+  padding: 0 16px;
 }
 @media (max-width: 1000px) {
   .functioning ol {
@@ -161,6 +167,8 @@ header {
 }
 .functioning li {
   position: relative;
+  display: flex;
+  align-items: center;
   list-style-type: none;
   background-color: #f6f6f6;
   padding: 24px 32px;
@@ -185,6 +193,10 @@ header {
 }
 .functioning li:hover {
   transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.functioning li:hover i::before {
+  color: #9356dc;
 }
 .functioning li i.fas {
   margin-right: 16px;
@@ -197,7 +209,12 @@ header {
   padding-bottom: 32px;
 }
 .restaurants h3 {
-  padding: 0 112px;
+  padding: 10px 112px;
+}
+@media (max-width: 1000px) {
+  .restaurants h3 {
+    padding: 10px 16px;
+  }
 }
 .restaurants .restaurants__cards {
   display: grid;
@@ -208,6 +225,7 @@ header {
 @media (max-width: 1000px) {
   .restaurants .restaurants__cards {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 16px;
   }
 }
 .restaurants .restaurants__cards .new {
@@ -237,49 +255,42 @@ header {
   object-fit: cover;
 }
 .restaurants .card__description {
-  position: relative;
-  background-color: white;
-  border-radius: 0 0 16px 16px;
-}
-.restaurants .card__description::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 32px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: inherit;
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-.restaurants .card__description::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 32px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: transparent;
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-}
-.restaurants .card__description:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .restaurants .card__description h3,
 .restaurants .card__description p {
   margin: 8px;
   padding: 5px;
+}
+.restaurants .card__description .card__heart {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: transparent;
+}
+.restaurants .card__description i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  transform: translateY(-50%);
+}
+.restaurants .card__description .fas {
+  color: transparent;
+  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 100ms;
+}
+.restaurants .card__description:hover .fas {
+  opacity: 1;
+  transform: translateY(-100%) scale(1.1);
 }
 
 footer {
@@ -287,7 +298,7 @@ footer {
   background-color: #383838;
   color: white;
 }
-footer h2 {
+footer h4 {
   font-family: "Shrikhand", cursive;
   font-weight: 500;
   padding: 16px 0;
@@ -328,48 +339,12 @@ header i:hover {
   margin-top: -32px;
 }
 .restaurant__title h2 {
+  display: flex;
+  justify-content: space-between;
   font-family: "Shrikhand", cursive;
   padding: 32px 16px;
-  position: relative;
-  background-color: white;
-  border-radius: 0 0 16px 16px;
   border-radius: 32px 32px 0 0;
   background-color: #F6F6F6;
-}
-.restaurant__title h2::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 400;
-  content: "\f004";
-  font-size: 32px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: inherit;
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  opacity: 1;
-  transition: all 200ms ease-in-out;
-}
-.restaurant__title h2::after {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f004";
-  font-size: 32px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: transparent;
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
-  -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-  background-image: linear-gradient(to top, rgb(147, 86, 220), rgb(255, 121, 218));
-}
-.restaurant__title h2:hover::after {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
 }
 
 .menus {
@@ -475,7 +450,7 @@ header i:hover {
 }
 
 section.order {
-  height: 30vh;
+  height: 12vh;
   display: grid;
   place-items: center;
 }

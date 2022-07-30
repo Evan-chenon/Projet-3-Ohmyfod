@@ -2,7 +2,10 @@
   background-color: $lightergrey;
   padding-bottom: 32px;
   h3{
-    padding: 0 112px;
+    padding: 10px 112px;
+    @media (max-width: $breakpoint) {
+      padding: 10px 16px;
+    }
   }
 
   .restaurants__cards {
@@ -12,6 +15,7 @@
     padding: 0 112px;
     @media (max-width: $breakpoint) {
       grid-template-columns: repeat(1, 1fr);
+      padding: 0 16px;
     }
     .new {
       position: relative;
@@ -43,11 +47,41 @@
       }
     }
     &__description {
-      @include heart-animeted;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       h3,
       p {
         margin: 8px;
         padding: 5px;
+      }
+      .card__heart{
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background: transparent;
+      }
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        transform: translateY(-50%);
+      }
+      .fas{
+        color: transparent;
+        background-image: linear-gradient($gradient);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 100ms;
+      }
+      &:hover .fas{
+        opacity: 1;
+        transform: translateY(-100%) scale(1.1);
       }
     }
   }

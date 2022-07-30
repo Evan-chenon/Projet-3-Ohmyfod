@@ -2,15 +2,21 @@
   counter-reset: steps;
   margin-bottom: 32px;
   padding: 0 112px;
+  @media (max-width: $breakpoint) {
+    padding: 0 16px;    
+  }
   ol {
     display: flex;
     gap: 32px;
-    @media (max-width: 1000px) {
+    padding: 0 16px;
+    @media (max-width: $breakpoint) {
         flex-direction: column;
     }
   }
   li {
     position: relative;
+    display: flex;
+    align-items: center;
     &::before{
       content: counter(steps);
       counter-increment: steps;
@@ -34,6 +40,10 @@
     @include base-shadow;
     &:hover{
         @include transform-zoom;
+        background-color: lighten($color-primary, 35%);
+        i::before{
+          color: $color-primary;
+        }
     }
     i.fas{
       margin-right: 16px;

@@ -9,8 +9,9 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  @media (max-width: 1000px) {
+@media (max-width: $breakpoint) {
+  .functioning,
+  .restaurants__cards{
     padding: 0 16px;
   }
 }

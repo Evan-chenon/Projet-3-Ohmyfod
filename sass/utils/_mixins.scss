@@ -10,39 +10,6 @@
   transform: scale(1.02);
 }
 
-@mixin heart($opacity: 1, $font-weigth: 400, $color: inherit) {
-  font-family: "Font Awesome 5 Free";
-  font-weight: $font-weigth;
-  content: "\f004";
-  font-size: 32px;
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: $color;
-  background-image: linear-gradient($gradient);
-  -webkit-background-clip: text;
-  opacity: $opacity;
-  transition: all 200ms ease-in-out;
-}
-
-@mixin heart-animeted {
-  position: relative;
-  background-color: white;
-  border-radius: 0 0 16px 16px;
-  &::before {
-    @include heart;
-  }
-  &::after {
-    @include heart($opacity: 0, $font-weigth: 900, $color: transparent);
-    @include gradient;
-  }
-  &:hover::after {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
-  }
-}
-
 @mixin base-button {
   color: white;
   font-weight: 300;
