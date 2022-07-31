@@ -79,7 +79,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background-color: #f3f3f3;
+  background-color: #E9E9E9;
   text-align: center;
   padding: 8px;
 }
@@ -91,8 +91,9 @@ header {
 }
 
 .explorer {
+  background-color: #F6F6F6;
   text-align: center;
-  margin: 32px;
+  padding: 32px;
 }
 .explorer h2 {
   font-size: 24px;
