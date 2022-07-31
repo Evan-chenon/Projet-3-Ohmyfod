@@ -1,6 +1,7 @@
 .functioning {
   counter-reset: steps;
   margin-bottom: 32px;
+  margin-top: 32px;
   padding: 0 112px;
   @media (max-width: $breakpoint) {
     padding: 0 16px;    

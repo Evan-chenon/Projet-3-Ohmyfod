@@ -2,7 +2,7 @@
   background-color: $lightergrey;
   padding-bottom: 32px;
   h3 {
-    padding: 10px 112px;
+    padding: 32px 0 16px 112px;
     @media (max-width: $breakpoint) {
       padding: 10px 16px;
     }
@@ -50,6 +50,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 10px;
       h3,
       p {
         margin: 3px;

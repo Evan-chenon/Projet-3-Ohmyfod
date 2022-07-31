@@ -147,6 +147,7 @@ header {
 .functioning {
   counter-reset: steps;
   margin-bottom: 32px;
+  margin-top: 32px;
   padding: 0 112px;
 }
 @media (max-width: 1000px) {
@@ -208,7 +209,7 @@ header {
   padding-bottom: 32px;
 }
 .restaurants h3 {
-  padding: 10px 112px;
+  padding: 32px 0 16px 112px;
 }
 @media (max-width: 1000px) {
   .restaurants h3 {
@@ -257,6 +258,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px;
 }
 .restaurants .card__description h3,
 .restaurants .card__description p {
@@ -316,26 +318,27 @@ header i:hover {
 .banner img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 30vh;
   object-fit: cover;
   object-position: center;
 }
 
-.restaurant__title {
+.restaurant {
   margin-top: -32px;
 }
-.restaurant__title h2 {
+.restaurant h2 {
   display: flex;
   justify-content: space-between;
   font-family: "Shrikhand", cursive;
-  padding: 32px 16px;
+  position: relative;
   border-radius: 32px 32px 0 0;
+  padding: 32px 16px;
   background-color: #F6F6F6;
 }
-.restaurant__title h2 .fa-heart {
+.restaurant h2 .fa-heart {
   font-size: 32px;
 }
-.restaurant__title h2 .fa-heart:hover {
+.restaurant h2 .fa-heart:hover {
   animation: bgcolor 0.5s;
   font-weight: 900;
   background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
@@ -384,7 +387,7 @@ header i:hover {
   background-color: white;
   border-radius: 16px;
   overflow: hidden;
-  margin: 8px;
+  margin: 0 8px 16px;
   box-shadow: 2px 1px 8px -3px #7E7E7E;
   animation: appear 1.5s;
   animation-fill-mode: both;
@@ -400,6 +403,9 @@ header i:hover {
 }
 .menu .menus__category .menu-item:nth-child(4) {
   animation-delay: 400ms;
+}
+.menu .menus__category .menu-item:nth-child(5) {
+  animation-delay: 500ms;
 }
 .menu .menus__category .menu-item .menu-item__price {
   margin-left: auto;
@@ -448,7 +454,7 @@ header i:hover {
 }
 
 section.order {
-  height: 12vh;
+  height: 17vh;
   display: grid;
   place-items: center;
 }

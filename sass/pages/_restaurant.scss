@@ -15,19 +15,20 @@ header i {
 .banner img {
   display: block;
   width: 100%;
-  height: 70vh;
+  height: 30vh;
   object-fit: cover;
   object-position: center;
 }
 
-.restaurant__title {
+.restaurant {
   margin-top: -32px;
   h2 {
     display: flex;
     justify-content: space-between;
     font-family: $font;
-    padding: 32px 16px;
+    position: relative;
     border-radius: 32px 32px 0 0;
+    padding: 32px 16px;
     background-color: $lightergrey;
     .fa-heart {
       @include heart;
@@ -65,7 +66,7 @@ header i {
   .menus__category {
     overflow: hidden;
     .menu-item {
-      @for $i from 1 through 4 {
+      @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
           animation-delay: 100ms * $i;
         }
@@ -74,7 +75,7 @@ header i {
       background-color: white;
       border-radius: 16px;
       overflow: hidden;
-      margin: 8px;
+      margin: 0 8px 16px;
       @include base-shadow;
       animation: appear 1.5s;
       animation-fill-mode: both;
@@ -127,7 +128,7 @@ header i {
   }
 }
 section.order {
-  height: 12vh;
+  height: 17vh;
   display: grid;
   place-items: center;
   button {
