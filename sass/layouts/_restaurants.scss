@@ -1,7 +1,7 @@
 .restaurants {
   background-color: $lightergrey;
   padding-bottom: 32px;
-  h3{
+  h3 {
     padding: 10px 112px;
     @media (max-width: $breakpoint) {
       padding: 10px 16px;
@@ -52,36 +52,14 @@
       justify-content: space-between;
       h3,
       p {
-        margin: 8px;
-        padding: 5px;
-      }
-      .card__heart{
-        width: 32px;
-        height: 32px;
-        padding: 0;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        background: transparent;
+        margin: 3px;
+        padding: 1px;
       }
       i {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 32px;
-        transform: translateY(-50%);
+        padding-right: 10px;
       }
-      .fas{
-        color: transparent;
-        background-image: linear-gradient($gradient);
-        background-clip: text;
-        -webkit-background-clip: text;
-        opacity: 0;
-        transition: all 100ms;
-      }
-      &:hover .fas{
-        opacity: 1;
-        transform: translateY(-100%) scale(1.1);
+      .fa-heart {
+        @include heart;
       }
     }
   }

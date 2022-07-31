@@ -27,3 +27,16 @@
     opacity: 0.9;
   }
 }
+
+@mixin heart {
+  font-size: 32px;
+  &:hover {
+    animation: bgcolor 0.5s;
+    font-weight: 900;
+    background: -webkit-linear-gradient($gradient);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+  }
+}

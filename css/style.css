@@ -261,36 +261,23 @@ header {
 }
 .restaurants .card__description h3,
 .restaurants .card__description p {
-  margin: 8px;
-  padding: 5px;
-}
-.restaurants .card__description .card__heart {
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  background: transparent;
+  margin: 3px;
+  padding: 1px;
 }
 .restaurants .card__description i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-right: 10px;
+}
+.restaurants .card__description .fa-heart {
   font-size: 32px;
-  transform: translateY(-50%);
 }
-.restaurants .card__description .fas {
+.restaurants .card__description .fa-heart:hover {
+  animation: bgcolor 0.5s;
+  font-weight: 900;
+  background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
-  background-image: linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
-  background-clip: text;
   -webkit-background-clip: text;
-  opacity: 0;
-  transition: all 100ms;
-}
-.restaurants .card__description:hover .fas {
-  opacity: 1;
-  transform: translateY(-100%) scale(1.1);
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 footer {
@@ -345,6 +332,18 @@ header i:hover {
   padding: 32px 16px;
   border-radius: 32px 32px 0 0;
   background-color: #F6F6F6;
+}
+.restaurant__title h2 .fa-heart {
+  font-size: 32px;
+}
+.restaurant__title h2 .fa-heart:hover {
+  animation: bgcolor 0.5s;
+  font-weight: 900;
+  background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 
 .menus {
