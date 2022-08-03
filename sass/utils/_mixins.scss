@@ -35,6 +35,7 @@
     background: -webkit-linear-gradient($gradient);
     color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-transition: 1s;
     transition: 1s;
     cursor: pointer;
