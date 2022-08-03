@@ -272,7 +272,6 @@ header {
   font-size: 32px;
 }
 .restaurants .card__description .fa-heart:hover {
-  animation: bgcolor 0.5s;
   font-weight: 900;
   background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
@@ -339,7 +338,6 @@ header i:hover {
   font-size: 32px;
 }
 .restaurant h2 .fa-heart:hover {
-  animation: bgcolor 0.5s;
   font-weight: 900;
   background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
