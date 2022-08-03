@@ -276,7 +276,8 @@ header {
   background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-transition: 1s;
+  transition: 1s;
   cursor: pointer;
 }
 
@@ -342,7 +343,8 @@ header i:hover {
   background: -webkit-linear-gradient(rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-transition: 1s;
+  transition: 1s;
   cursor: pointer;
 }
 
