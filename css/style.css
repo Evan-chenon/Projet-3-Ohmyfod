@@ -137,11 +137,12 @@ header {
   content: "";
   height: 100px;
   width: 100px;
-  border-right: 5px solid transparent;
+  border-right: 0px solid transparent;
   border-top: 5px solid #9356dc;
   border-left: 5px solid #ff79da;
+  border-bottom: 5px solid #99e2d0;
   border-radius: 50%;
-  animation: spin 3s infinite;
+  animation: spin 1s ease infinite;
 }
 
 .functioning {
